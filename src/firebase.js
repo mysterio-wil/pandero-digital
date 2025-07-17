@@ -4,12 +4,12 @@ import { getFirestore } from 'firebase/firestore';
 import { getAuth, GoogleAuthProvider } from 'firebase/auth'; // ✅ importa auth
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDMJEIXAIiykoE1Q7rwxNLWhDavktS0zAY",
-  authDomain: "pandero-digital.firebaseapp.com",
-  projectId: "pandero-digital",
-  storageBucket: "pandero-digital.firebasestorage.app",
-  messagingSenderId: "553721776885",
-  appId: "1:553721776885:web:c17fe1c409003a2a9b93bc"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
 };
 
 export const app = initializeApp(firebaseConfig);
